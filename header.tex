@@ -125,7 +125,7 @@ Visit \url{http://openEMS.de} how to contribute and enhance this User Manual.}}
 %%% font of  matlab variables including links to the first definition.
 \definecolor{varcol}{RGB}{0,127,255}
 \usepackage{ifthen}
-\newcommand{\matv}[2][\empty]    %% \matv[label]{parameter-name}.
+\newcommand{\matv}[2][\empty]    %% \matv[label]{parameter-name}.   if the name of the variable has underscore '_' , for example a_b, \matv[para:a_b]{a\_b}
   {
       \ifthenelse{\equal{#1}{\empty}}  % first optional argument is the label that the variable refer to.  #2 is for the name of the variable. default #1 is para:#2. \matv{paramete-rname}=\matv[para:parameter-name]{parameter-name}
       {\hyperref[para:#2]{\textcolor{varcol}{\texttt{#2}}}}
